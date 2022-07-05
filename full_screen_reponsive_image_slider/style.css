@@ -94,6 +94,18 @@ body {
   }
 }
 
+@media (max-width: 700px) {
+  .slide .content {
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+  }
+
+  .slide.current .content {
+    transform: translateY(-300px);
+  }
+}
+
 /* ? Backgorund Images */
 .slide:first-child {
   background: url("img/img1.jpg") no-repeat center center/cover;
