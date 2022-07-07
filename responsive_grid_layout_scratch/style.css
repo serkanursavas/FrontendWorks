@@ -142,3 +142,59 @@ img {
   grid-template-columns: repeat(2, 1fr);
   padding: 3rem;
 }
+
+/* & Portfolio */
+.portfolio {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.portfolio img {
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+
+/* & Footer */
+footer {
+  margin-top: 2rem;
+  background: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* & Media Queries */
+@media (max-width: 960px) {
+  .top-container {
+    grid-template-areas:
+      "showcase showcase"
+      "top-box-a top-box-b";
+  }
+
+  .showcase h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-nav ul {
+    grid-template-columns: 1fr;
+  }
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  .info .btn {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .top-container {
+    grid-template-areas:
+      "showcase"
+      "top-box-a"
+      " top-box-b";
+  }
+}
