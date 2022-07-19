@@ -10,6 +10,8 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="default.css" />
+    <link id="theme-style" rel="stylesheet" href="" />
+
     <title>Serkan Ursavaş</title>
   </head>
   <body>
@@ -35,10 +37,10 @@
               Personalize Theme
             </h5>
             <div id="theme-options-wrapper">
-              <div class="theme-dot" id="light-mode"></div>
-              <div class="theme-dot" id="blue-mode"></div>
-              <div class="theme-dot" id="green-mode"></div>
-              <div class="theme-dot" id="purple-mode"></div>
+              <div data-mode="light" class="theme-dot" id="light-mode"></div>
+              <div data-mode="blue" class="theme-dot" id="blue-mode"></div>
+              <div data-mode="green" class="theme-dot" id="green-mode"></div>
+              <div data-mode="purple" class="theme-dot" id="purple-mode"></div>
             </div>
             <p id="settings-note">
               Theme setting will be saved for <br />
@@ -184,5 +186,6 @@
         </form>
       </div>
     </section>
+    <script src="script.js"></script>
   </body>
 </html>
