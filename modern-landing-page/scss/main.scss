@@ -163,6 +163,7 @@ section {
   text-align: center;
 
   &_title {
+    font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
     font-size: 4rem;
     text-transform: uppercase;
     line-height: 1.1;
@@ -176,6 +177,11 @@ section {
 
   @media (min-width: 45em) {
     text-align: left;
+    margin-bottom: 9em;
+
+    &_title {
+      margin: 0;
+    }
 
     &_img {
       float: right;
@@ -183,6 +189,16 @@ section {
       // outline: 2px solid red;
       shape-outside: url(../img/shoe-1.png);
       shape-margin: 1em;
+      margin: 0 -5em 0 0;
+    }
+
+    &.shoe-left {
+      .product_img {
+        float: left;
+        shape-outside: url(../img/shoe-2.png);
+        margin: 0 0 0 -5em;
+        shape-margin: 2em;
+      }
     }
   }
 }
