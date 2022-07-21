@@ -150,3 +150,61 @@ section {
     }
   }
 }
+
+.product {
+  background: radial-gradient(
+    var(--clr-inner, limegreen),
+    var(--clr-outer, purple)
+  );
+
+  padding: 3em;
+  border-radius: 1em;
+  margin-bottom: 3em;
+  text-align: center;
+
+  &_title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: #fff;
+    text-shadow: 0 0 0.2em rgba(#000, 0.2);
+  }
+
+  &_img {
+    margin: -5em 0 0 0;
+  }
+
+  @media (min-width: 45em) {
+    text-align: left;
+
+    &_img {
+      float: right;
+      width: 65%;
+      // outline: 2px solid red;
+      shape-outside: url(../img/shoe-1.png);
+      shape-margin: 1em;
+    }
+  }
+}
+
+.hero {
+  --clr-accent: #faa700;
+}
+
+.shoe-red {
+  --clr-inner: #faa700;
+  --clr-outer: #e48d00;
+  --clr-accent: #a1173c;
+}
+
+.shoe-white {
+  --clr-inner: #fce4b3;
+  --clr-outer: #eac886;
+  --clr-accent: #2f4858;
+}
+
+.shoe-blue {
+  --clr-inner: #6dd5ed;
+  --clr-outer: #2193b0;
+  --clr-accent: #008951;
+}
