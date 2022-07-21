@@ -3,3 +3,74 @@
 *::after {
   box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 65em;
+  margin: 0 auto;
+}
+
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-text, #fff);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  padding: 0.5em 1.25em;
+  background-color: var(--clr-accent, blue);
+  border-radius: 0.25em;
+  transition: transform 250ms ease-in-out;
+  opacity: 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.primary-title {
+  font-size: 4rem;
+  font-size: clamp(3rem, 5vw + 1rem, 4.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.hero {
+  color: white;
+  text-align: center;
+  padding: 15em 0;
+  /* background-size: 10%; */
+}
+@supports (background-blend-mode: multiply) {
+  .hero {
+    background-image: url("../img/shoe-3.png"), radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
