@@ -44,7 +44,7 @@ body {
   left: 50%;
   bottom: 50%;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(calc(50% - 20px), calc(50% - 20px));
 }
 
 .img-container img {
@@ -62,7 +62,7 @@ body {
 }
 
 .music-container.play .img-container img {
-  /* animation-play-state: running; */
+  animation-play-state: running;
 }
 
 @keyframes rotate {
@@ -96,7 +96,7 @@ body {
   font-size: 30px;
 }
 
-a.ction-btn:focus {
+.action-btn:focus {
   outline: 0;
 }
 
@@ -108,9 +108,10 @@ a.ction-btn:focus {
   left: 20px;
   width: calc(100% - 40px);
   padding: 10px 10px 10px 150px;
-  /* opacity: 0; */
+  opacity: 0;
   transform: translateY(0%);
-  transition: transform 0.3 ease-in, opacity 0.3s ease-in;
+  transition: transform 0.3 ease-in;
+  text-transform: capitalize;
 }
 
 .music-info h4 {
@@ -129,12 +130,12 @@ a.ction-btn:focus {
   margin: 10px;
   height: 4px;
   width: 100%;
+  transform: translateX(-10px);
 }
 
 .progress {
   background-color: #fe8daa;
   border-radius: 5px;
   height: 100%;
-  width: 50%;
   transition: width 0.1s linear;
 }
