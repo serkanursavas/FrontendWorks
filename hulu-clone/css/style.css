@@ -109,6 +109,8 @@ h4 {
   display: flex;
   justify-content: flex-end;
   padding: 20px 40px;
+  z-index: 2;
+  position: relative;
 }
 
 .header nav .login-btn {
@@ -142,6 +144,22 @@ h4 {
 .header .header-text-2 {
   font-size: 18px;
   margin: 25px 0;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.76) 15.54%,
+    rgba(0, 0, 0, 0.192) 60.23%,
+    rgba(0, 0, 0, 8e-5) 100%
+  );
 }
 
 /* * SUB-HEADER */
@@ -225,7 +243,112 @@ h4 {
   background: url("../img/cover-4.jpg") no-repeat center center/cover;
 }
 
+/* * LIVE */
+.live {
+  background: #151516;
+  padding: 40px;
+}
+
+.live-border {
+  border: 4px solid #1ce783;
+  border-radius: 16px;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.live a {
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 20px;
+  text-decoration: underline;
+}
+
+/* * LIVE SPORTS */
+.live-sports {
+  background: url("../img/live-sports.jpg") no-repeat center center/cover;
+  height: 800px;
+  position: relative;
+}
+
+.live-sports-content {
+  position: absolute;
+  top: 160px;
+  left: 100px;
+  max-width: 550px;
+}
+
+.live-sports-logos {
+  width: 300px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.live-sports-logos > div {
+  background: url("../img/network-logo-bg.png") no-repeat center center/cover;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.live-sports-logos img {
+  width: 40px;
+}
+
+/* * FOOTER */
+.footer {
+  background: #ebedf2;
+  color: #333;
+}
+
+.footer a {
+  color: #333;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px;
+}
+
+.footer-lists {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-lists .list-head {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.divider {
+  width: 100%;
+  height: 3px;
+  border-top: 1px solid #ccc;
+  margin: 30px 0;
+}
+
+.social-icons img {
+  width: 25px;
+  height: 25px;
+  margin-right: 25px;
+}
+
 /* & MEDIA QUERIES */
+@media (max-width: 1100px) {
+  .categories .covers {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .header .logo {
     width: 200px;
@@ -258,5 +381,37 @@ h4 {
   .sub-header > div:last-of-type {
     justify-self: center;
     align-self: center;
+  }
+
+  .text-xl {
+    line-height: 1.3;
+    font-size: 40px;
+  }
+
+  .sub-text {
+    font-size: 20px;
+  }
+
+  .categories .covers {
+    grid-template-columns: 1fr;
+  }
+
+  .live-border {
+    padding: 30px 10px;
+  }
+
+  .live-sports {
+    background: url("../img/live-sports-small.jpg") no-repeat center
+      center/cover;
+  }
+
+  .live-sports-content {
+    top: 30px;
+    left: 30px;
+    margin-top: 60px;
+  }
+
+  .footer-lists {
+    flex-direction: column;
   }
 }
